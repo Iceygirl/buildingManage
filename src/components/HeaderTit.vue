@@ -26,12 +26,15 @@ export default {
 </script>
  
 <style lang="scss" scoped>
+@import 'hotcss/px2rem.scss';
+
 .Header {
-  height:42px;
-  line-height:42px;
+  width:100%;
+  height:px2rem(80); 
+  line-height:px2rem(80);
   text-align:center;
   background: #00A1FF;
   color:#fff;
-  font-size:18px;
+  font-size:px2rem(34);
 }
 </style>

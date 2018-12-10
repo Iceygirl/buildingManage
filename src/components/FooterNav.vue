@@ -6,19 +6,19 @@
           <span class="itemIcon">
             <i class="iconfont icon-bi"></i>
           </span> 
-          <span>预约</span>
+          <span class="itemText">预约</span>
         </div>
         <div class="navItem" @click="goTo('/notice')" :class="{'on':isCurrent('/notice')}">
           <span class="itemIcon">
             <i class="iconfont icon-xiaoxi1"></i>
           </span> 
-          <span>通知</span>
+          <span class="itemText">通知</span>
         </div>
         <div class="navItem" @click="goTo('/mine')" :class="{'on':isCurrent('/mine')}">
           <span class="itemIcon">
             <i class="iconfont icon-mine-gray"></i>
           </span> 
-          <span>我的</span>  
+          <span class="itemText">我的</span>  
         </div>
       </footer>
   </section>
@@ -36,7 +36,6 @@ export default {
   methods: {  
     goTo(path) {
       this.$router.replace(path)
-      console.log(this.$route)
     },
     isCurrent(path) {
       return (this.$route.path === path)
@@ -46,8 +45,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'hotcss/px2rem.scss';
+ 
 .FooterNav {
-  border-top:1px solid #e4e4e4;
+  border-top:px2rem(2) solid #e4e4e4;
   position:fixed;
   z-index:100;
   left:0;
@@ -55,7 +56,7 @@ export default {
   bottom:0;
   background-color:#fff;
   width:100%;
-  height:50px;
+  height:px2rem(90);
   display:flex;
   .navItem {
     display:flex;
@@ -63,20 +64,20 @@ export default {
     text-align:center;
     flex-direction:column;
     align-items:center;
-    margin:5px;
     color:#999999;
     &.on {
       color:#00A1FF;
     }
-    span {
-      font-size:12px;
-      margin-top:2px;
-      margin-bottom:2px;
+    .itemIcon {
+      margin-top:px2rem(6);
+      margin-bottom:px2rem(4);
       .iconfont {
-        font-size:22px;
+        font-size:px2rem(44);
       }
     }
-     
+    .itemText {
+      font-size:px2rem(24);
+    }
   }
 }
   
