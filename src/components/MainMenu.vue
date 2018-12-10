@@ -16,11 +16,25 @@
           <span>访客预约</span>
         </div>
       </div>
-    </div>
+      <div class="menuRow">
+        <div class="menuItem">
+          <span class="iconWrap">
+            <i class="iconfont icon-bianji"></i>
+          </span>
+          <span>预约编辑</span>
+        </div>
+        <div class="menuItem">
+          <span class="iconWrap">
+            <i class="iconfont icon-chaxun2"></i>
+          </span>
+          <span>记录查询</span>
+        </div>
+      </div>  
+    </div> 
   </section>
 </template>
 
-<script>
+<script> 
 export default {
   data () {
     return {
