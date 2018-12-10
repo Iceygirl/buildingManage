@@ -2,13 +2,16 @@
   <!-- 头部标题组件 -->
   <section>
     <div class="Header">
-      头部标题组件
+      {{title}}
     </div>
   </section>
 </template>
-
-<script>
+ 
+<script> 
 export default {
+  props:{
+    title:String
+  },
   data () {
     return {
     }
@@ -21,7 +24,14 @@ export default {
   }
 }
 </script>
-
+ 
 <style lang="scss" scoped>
-
+.Header {
+  height:42px;
+  line-height:42px;
+  text-align:center;
+  background: #00A1FF;
+  color:#fff;
+  font-size:18px;
+}
 </style>
