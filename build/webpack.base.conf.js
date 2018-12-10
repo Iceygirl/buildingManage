@@ -33,12 +33,14 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    alias: {
+    alias: { 
       'vue$': 'vue/dist/vue.esm.js',
       'components': resolve('src/components'), 
       'pages': resolve('src/pages'), 
       'js': resolve('src/assets/js'), 
-      'css': resolve('src/assets/css') 
+      'font': resolve('src/assets/font'), 
+      'style': resolve('src/assets/style'), 
+      'hotcss': resolve('src/lib/hotcss'), 
     }
   },
   module: {
@@ -77,7 +79,11 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // {
+      //   test: /\.scss$/,
+      //   loaders: [ "style", "css", "sass"]
+      // }
     ]
   },
   node: {
