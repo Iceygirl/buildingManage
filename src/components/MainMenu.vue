@@ -7,13 +7,13 @@
           <span class="iconWrap">
             <i class="iconfont icon-fangke"></i>
           </span>
-          <span>访客预约</span>
+          <span class="menuText">访客预约</span>
         </div>
         <div class="menuItem">
           <span class="iconWrap">
             <i class="iconfont icon-huiyishi"></i>
           </span>
-          <span>访客预约</span>
+          <span class="menuText">访客预约</span>
         </div>
       </div>
       <div class="menuRow">
@@ -21,13 +21,13 @@
           <span class="iconWrap">
             <i class="iconfont icon-bianji"></i>
           </span>
-          <span>预约编辑</span>
+          <span class="menuText">预约编辑</span>
         </div>
         <div class="menuItem">
           <span class="iconWrap">
             <i class="iconfont icon-chaxun2"></i>
           </span>
-          <span>记录查询</span>
+          <span class="menuText">记录查询</span>
         </div>
       </div>  
     </div> 
@@ -50,5 +50,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.Menu {
+  .menuRow {
+    .menuItem {
+      .iconfont {
 
+      }
+      .menuText {
+        
+      }
+    }
+  }
+}
 </style>
